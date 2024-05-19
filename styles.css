@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: white;
+  background: url(ri.jpg) no-repeat center center/cover;
+  }
+ 
+#about h1{
+  color: white;
+  margin: 55px;
+  text-align: center;
+  font-size: 100px;
+}
+
+#about .about{
+  display: flex;
+}
+
+#about .about img{
+  width: 50px;
+  height: 50px;
+  padding: 0px 30px;
+   }
+
+#about .name{
+  padding: 10px;
+}
+
+#about .name h2{
+  font-size: 2rem;
+  color: yellow;
+}
+
+#about .name p{
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+#education{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url(ed.jpg) no-repeat center center/cover;
+  }
+ 
+#education h1{
+  color: white;
+  margin: 55px;
+  text-align: center;
+  font-size: 100px;
+}
+
+#education .education{
+  display: flex;
+}
+
+#education .name{
+  padding: 10px;
+}
+
+#education .name h2{
+  font-size: 2rem;
+  color: yellow;
+}
+
+#education .name p{
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+#skills{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url(ngi.jpg) no-repeat center center/cover;
+  }
+ 
+#skills h1{
+  color: white;
+  margin: 55px;
+  text-align: center;
+  font-size: 50px;
+}
+
+#skills .skills{
+  display: flex;
+}
+
+#skills .skills img{
+  width: 500px;
+  height: 400px;
+  padding: 0px 30px;
+  }
+
+#skills .name{
+  padding: 10px;
+}
+
+#skills .name h2{
+  font-size: 2rem;
+  color: yellow;
+}
+
+#skills .name p{
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+#hobbies{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url(bal.jpg) no-repeat center center/cover;
+  }
+ 
+#hobbies h1{
+  color: white;
+  margin: 55px;
+  text-align: center;
+  font-size: 50px;
+}
+
+#hobbies .hobbies{
+  display: flex;
+}
+
+#hobbies .hobbies img{
+  width: 500px;
+  height: 400px;
+  padding: 0px 30px;
+  }
+
+#hobbies .name{
+  padding: 10px;
+}
+
+#hobbies .name h2{
+  font-size: 2rem;
+  color: yellow;
+}
+
+#hobbies .name p{
+  font-size: 2.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+
+#photo{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url(rins.jpg) no-repeat center center/cover;
+  }
+  
+#photo h2{
+  margin: 60px;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+  
+#photo .gallery{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#photo .gallery img{
+  width: 360px;
+  height: 640px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#photo .gallery img:hover{
+  background-color: white;
+  cursor: pointer;
+}
+
+#contact .contact {
+  background: gray;
+  width: 100%;
+  padding: 100px 0px;
+  background: url(rins.jpg) no-repeat center center/cover;
+  
+}
+
+#contact .title h2{
+  color: white;
+  font-size: 75px;
+  width: 1130px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#contact .box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+#contact .card{
+  height: 365px;
+  width: 335px;
+  padding: 20px 35px;
+  background: white;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+#contact .card i{
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color: blue;
+}
+
+#contact h5{
+  color: black;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#contact .pra p{
+  color: black;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+
